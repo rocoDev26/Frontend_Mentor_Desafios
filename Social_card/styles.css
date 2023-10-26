@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+:root{
+    /* PRIMARY */
+    --darkCyan: #19a2ae;
+    --veryDarkDesaturatedBlue: #2d3248;
+    --darkGrayishBlue: hsl(227, 10%, 46%);
+    /* NEUTRAL */
+    --darkGray: #969696;
+
+    --body-title: clamp(1rem, 4vw, 1.3rem);
+    --body-paragraph: clamp(1rem, 2vw, 1.1rem);
+    --card-social-title: clamp(1rem, 4vw, 1.3rem);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background-color: var(--darkCyan);
+    font-family: 'Kumbh Sans';
+    background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+    background-size: cover;
+}
+
+
+.card {
+    width: min(90%, 350px);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    box-shadow: 4px 4px 20px #2d324857;
+}
+.card__pattern {
+    display: block;
+    border-radius: 10px 10px 0 0;
+}
+.card__user_section {
+    text-align: center;
+}
+.card__user_section p {
+    color: var(--darkGray);
+}
+.card__user_photo {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    transform: translateY(-39px);
+    border: 5px solid white;
+}
+.card__user_name {
+    font-size: var(--body-title);
+    color: var(--veryDarkDesaturatedBlue);
+    margin-bottom: 1.5rem;
+}
+.card__user_name span {
+    color: var(--darkGray);
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+.card__social_section {
+    display: flex;
+    gap: 1.5rem;
+    padding: 2rem 0;
+}
+.card__social_item {
+}
+.card__social_item h3 {
+    color: var(--veryDarkDesaturatedBlue);
+}
+.card__social_item span {
+    font-size: .8rem;
+    color: var(--darkGray);
+}

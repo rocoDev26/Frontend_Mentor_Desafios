@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+:root{
+    /* PRIMARY */
+    --darkCyan: #19a2ae;
+    --veryDarkDesaturatedBlue: #2d3248;
+    --darkGrayishBlue: hsl(227, 10%, 46%);
+    /* NEUTRAL */
+    --darkGray: #969696;
+
+    --body-title: clamp(1rem, 4vw, 1.3rem);
+    --body-paragraph: clamp(1rem, 2vw, 1.1rem);
+    --card-social-title: clamp(1rem, 4vw, 1.3rem);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+img{
+}
+html{
+    height: 100%;
+}

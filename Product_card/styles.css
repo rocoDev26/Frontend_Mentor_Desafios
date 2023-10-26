@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --darkCyan: #3c8067;
+    --cream: #f2ebe3; 
+
+    --veryDarkBlue:  #1c232b;
+    --darkGrayishBlue: #6c7289;
+    --white:#fff;
+
+    --margin_body_card: 13px;
+}
+html{
+    height: 100%;
+}
+body{ 
+    min-height: 100%;
+    display: grid;
+    place-items: center;
+    background-color: var(--cream);
+}
+
+
+
+.card {
+    width: 90%;
+    max-width: 340px;
+}
+.img_mobile {
+    width: 100%;
+    display: block;
+    border-radius: 10px 10px 0 0;
+}
+.img_desktop {
+    display: none;
+}
+.card_body_section {
+    padding: 15px 25px;
+    background-color: var(--white);
+}
+.card_body_perfume {
+    color: var(--darkGrayishBlue);
+    font-family: 'Montserrat', sans-serif;
+    font-size: .8rem;
+    letter-spacing: 4px;
+}
+.card_body_section h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.5rem;
+    margin: var(--margin_body_card) 0;
+}
+.card_body_paragraph {
+    color: var(--darkGrayishBlue);
+    font-family: 'Montserrat', sans-serif;
+    font-size: .85rem;
+    margin-bottom: var(--margin_body_card);
+}
+.card_container_price {
+    margin-bottom: var(--margin_body_card);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.card_newPrice {
+    color: var(--darkCyan);
+    font-family: 'Fraunces', serif;
+    font-size: 1.8rem;
+}
+.card_oldPrice {
+    color: var(--darkGrayishBlue);
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: line-through;
+}
+.card_containet_btn {
+}
+.addToCart_btn {
+    width: 100%;
+    border: 0;
+    background-color: var(--darkCyan);
+    color: var(--white);
+    font-weight: bold;
+    padding: 17px 0;
+    border-radius: 10px;
+}
+.iconToCart {
+    margin-right: 10px;
+}
+
+
+@media (min-width: 768px){
+    :root{
+        --margin_body_card: 16px;
+    }
+    .card {
+        display: flex;
+        max-width: 500px;
+        box-shadow: 3px 3px 10px #33333357;
+        border-radius: 14px;
+    }
+    .card_body_section {
+        border-radius: 0 14px 14px 0;
+    }
+    .card_body_section h3 {
+        font-size: 1.8rem;
+    }
+    .card_body_paragraph {
+        font-size: .9rem;
+
+    }
+    .img_mobile {
+        display: none;
+    }
+    .img_desktop {
+        display: block;
+        width: 50%;
+        border-radius: 14px 0 0 14px;
+    }
+    .addToCart_btn {
+        padding: 15px 0;
+        cursor: pointer;
+    }
+}
