@@ -1,0 +1,124 @@
+@font-face {
+    font-family: "BigShouldersDisplay";
+    font-weight: 700;
+    src: 
+    url("fonts/BigShouldersDisplay_Bold_700.ttf"),
+    format("ttf");
+}
+
+@font-face {
+    font-family: "LexendDeca";
+    font-weight: 400;
+    src: 
+    url("fonts/LexendDeca_Regular_400.ttf"),
+    format("ttf");
+}
+
+:root {
+
+    /* PRIMARY */
+    --bright-orange: hsl(31, 77%, 52%);
+    --bright-orange-400: hsla(31, 77%, 52%, 0.600);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    /* NEUTRAL */
+
+    /* paragraph */
+    --transparent-white: hsla(0, 0%, 100%, 0.75); 
+
+    /* backgrounds - headings - buttons */
+    --very-light-gray: hsl(0, 0%, 95%);
+
+    /* body copy */
+    --font-size: 15px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100dvh;
+}
+
+body {
+    min-height: 100%;
+    display: grid;
+    place-items: center;
+    font-family: "LexendDeca";
+}
+
+.columCardSection {
+    width: 90%;
+    max-width: 800px;
+    margin: 30px 0;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.columnCard {
+    padding: 35px 45px;
+    flex-basis: 260px;
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+.columnCard img {
+   margin-bottom: 30px;
+}
+.columnCard h3 {
+    margin-bottom: 30px;
+    color: var(--very-light-gray);
+    font-size: clamp(2.4rem, 4vw, 3.5rem);
+    font-family: "BigShouldersDisplay";
+}
+.columnCard p {
+    margin-bottom: 30px;
+    color: var(--transparent-white);
+    font-size: clamp(.7rem, 3.3vw, 1rem);
+    font-family: "LexendDeca";
+}
+.columnCard button {
+    border: 0;
+    padding: 15px 30px;
+    border-radius: 35px;
+    font-weight: bold;
+    font-family: "LexendDeca";
+}
+
+.columnCard:nth-child(1) {
+    background-color: var(--bright-orange);
+}
+.columnCard:nth-child(1) button {
+    color: var(--bright-orange);   
+}
+.columnCard:nth-child(2) {
+   background-color: var(--dark-cyan);
+}
+.columnCard:nth-child(2) button {
+    color: var(--dark-cyan);   
+}
+.columnCard:nth-child(3) {
+    background-color: var(--very-dark-cyan);
+}
+.columnCard:nth-child(3) button {
+    color: var(--very-dark-cyan);   
+}
+
+@media (min-width:867px){
+    .columnCard button {
+        cursor: pointer;
+    }
+    .columnCard button:hover {
+        background-color: transparent;
+        color: var(--very-light-gray);
+        outline: 3px solid white;
+    }
+}
