@@ -1,0 +1,189 @@
+:root {
+    /* primary colors */
+      --Violet: hsl(257, 40%, 49%);
+      --SoftMagenta: hsl(300, 69%, 71%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--Violet);
+    min-height: 100dvh;
+    font-family: system-ui, -apple-system, sans-serif;
+    position: relative;
+}
+
+/* HEADER STYLES */
+.header {
+}
+
+.header a {
+
+}
+
+.header a img {
+    width: 40%;
+    max-width: 270px;
+}
+
+.header .nav {
+    padding: 40px 0 0 0;
+}
+
+/* MAIN STYLES */
+
+.main {
+
+}
+
+/* SECCION IMAGEN PRINCIPAL */
+
+.main .seccionImagenPrincipal {
+    margin: 70px 0;
+}
+
+.bgMobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    max-width: 800px;
+}
+
+.bgDesktop {
+    display: none;
+}
+
+.seccionImagenPrincipal img {
+    max-width: 800px;
+}
+
+/* SECCION TEXTO PRINCIPAL */
+
+.seccionTextoPrincipal {
+    text-align: center;
+}
+
+.seccionTextoPrincipal h1 {
+    color: white;
+    /* font-size: 2rem; */
+    font-size: clamp(2rem, 5vw, 3rem);
+    text-wrap: balance;
+}
+
+.seccionTextoPrincipal p {
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 40px 0;
+}
+
+.seccionTextoPrincipal button {
+    padding: 10px 60px;
+    border: none;
+    border-radius: 30px;
+    color: var(--Violet);
+    font-weight: 600;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.295);
+}
+
+/* FOOTER STYLES */
+
+.footer {
+    margin: 70px auto;
+    text-align: center;
+}
+
+.contenedorIconosRedesSociales {
+
+}
+
+.contenedorIconosRedesSociales a {
+
+}
+
+.contenedorIconosRedesSociales a svg {
+    color: white;
+    width: 25px;
+}
+
+
+@media (min-width: 800px){
+
+    body {
+        background-image: url(images/bg-desktop.svg);
+        object-fit: cover;
+        background-repeat: no-repeat;
+    }
+
+    .main {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .seccionImagenPrincipal {
+        flex: 1;
+    }
+
+    .bgMobile {
+        display: none;
+    }
+
+    /* .bgDesktop {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 100px;
+        height: 100vh;
+        width: 100%;
+        object-fit: cover;
+        z-index: -100;
+    } */
+
+    .seccionTextoPrincipal {
+        flex: 1;
+        text-align: start;
+    }
+
+    .seccionTextoPrincipal button {
+        cursor: pointer;    
+    }
+
+    .seccionTextoPrincipal button:hover {
+        background-color: var(--SoftMagenta);
+        color: white;
+    }
+
+    .footer {
+        margin: 0 auto;
+        text-align: end;
+    }
+
+    .contenedorIconosRedesSociales a svg {
+        width: 40px;
+    }
+
+    .contenedorIconosRedesSociales a svg:hover {
+        color: var(--SoftMagenta);
+        cursor: pointer;
+    }
+}
