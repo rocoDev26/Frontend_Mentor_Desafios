@@ -1,0 +1,170 @@
+:root {
+    /* COLORES PRIMARIOS */
+
+    /* (main background) */
+    --VeryDarkBlue: #090b1a;
+
+    /* (card background) */
+    --DarkDesaturatedBlue: hsl(244, 38%, 16%);
+
+    /* (accent) */
+    --Softviolet: hsl(277, 64%, 61%);
+
+    /* COLORES NEUTRALES */
+
+    /* (main heading, stats) */
+    --White: hsl(0, 0%, 100%);
+
+    /* (main paragraph) */
+    --SlightlyTransparentWhite : hsla(0, 0%, 100%, 0.75);
+
+    /* (stat headings) */
+    --SlightlyTransparentWhite : hsla(0, 0%, 100%, 0.6);
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100dvh;
+    font-family: system-ui;
+    background-color: var(--VeryDarkBlue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 85%;
+    margin: 50px auto;
+    max-width: 1000px;
+
+    border-radius: 10px;
+    background-color: var(--DarkDesaturatedBlue);
+}
+
+.containerImg {
+    position: relative;
+}
+
+.imgDesktop {
+    display: none;
+}
+
+.imgMobile {
+    border-radius: 10px 10px 0 0;
+}
+
+.bgColor {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(277, 86%, 40%, 0.532);
+    top: 0;
+    left: 0;
+    border-radius: 10px 10px 0 0;
+}
+
+.cardTextContainer {
+    text-align: center;
+    padding: 40px 30px;
+}
+
+.cardTextContainer h1 {
+    color: var(--White);
+}
+
+.cardTextContainer h1 span {
+    color: var(--Softviolet);
+}
+
+.cardTextContainer h1 + p {
+    color: var(--SlightlyTransparentWhite);
+    margin: 20px 0;
+}
+
+.estadisticasSeccion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+
+    margin-top: 40px;
+}
+
+.estadisticasSeccion p {
+    color: var(--SlightlyTransparentWhite);
+    font-weight: 400;
+}
+
+.estadisticasSeccion p span {
+    color: var(--White);
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: block;
+}
+
+@media (min-width:900px){
+    .card {
+        display: flex;
+    }
+
+    .containerImg {
+        flex: 1;
+        order: 2;
+    }
+
+    .cardTextContainer {
+        flex: 1;
+        text-align: start;
+    }
+
+    .cardTextContainer h1 {
+        font-size: 2rem;
+        text-wrap: balance;
+    }
+
+    .cardTextContainer p {
+        font-size: 1.2rem;
+        text-wrap: balance;
+    }
+
+    .bgColor {
+        border-radius: 0 10px 10px 0;
+    }
+
+    .imgMobile {
+        display: none;
+    } 
+
+    .imgDesktop {
+        display: block;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0 10px 10px 0;
+    }
+
+    .cardTextContainer {
+        order: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 40px 0 40px 50px;
+        
+    }
+
+    .estadisticasSeccion {
+        flex-direction: row;
+        justify-content: start;
+        gap: 35px;
+    }
+}
